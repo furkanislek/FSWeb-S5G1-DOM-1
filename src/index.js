@@ -72,13 +72,13 @@ anchors[3].textContent = "Özellikler";
 anchors[4].textContent = "Hakkımızda";
 anchors[5].textContent = "İletişim";
 
-sirketLogo.setAttribute("src", "https://picsum.photos/200/100");
+sirketLogo.setAttribute("src", "../mocks/img/logo.png");
 
 h1BuDom.textContent = "Bu DOM Mükemmel";
 
 BtnBaslama.textContent = "Başlayın";
 
-altImg.setAttribute("src", "https://picsum.photos/200/100");
+altImg.setAttribute("src", "../mocks/img/cta.png");
 
 h4Text[0].textContent = "Özellikler";
 h4Text[1].textContent = "Hakkında";
@@ -109,7 +109,7 @@ pTexts[6].textContent = "+90 (123) 456-7899";
 
 pTexts[7].textContent = "satis@birsirketsitesi.com.tr";
 
-middleImg.setAttribute("src", "https://picsum.photos/600/300");
+middleImg.setAttribute("src", "../mocks/img/accent.png");
 
 footerAnchor.classList.add("bold");
 footerAnchor.textContent = "Copyright Bir Şirket Sitesi 2022";

@@ -59,12 +59,10 @@ const pTexts = document.querySelectorAll("p");
 const middleImg = document.querySelector(".middle-img");
 const footerAnchor = document.querySelectorAll("a")[6];
 
-anchors[0].classList.add("italic");
-anchors[1].classList.add("italic");
-anchors[2].classList.add("italic");
-anchors[3].classList.add("italic");
-anchors[4].classList.add("italic");
-anchors[5].classList.add("italic");
+anchors.forEach((e) => {
+  e.classList.add("italic")
+});
+
 anchors[0].textContent = "Servisler";
 anchors[1].textContent = "Ürünler";
 anchors[2].textContent = "Vizyon";

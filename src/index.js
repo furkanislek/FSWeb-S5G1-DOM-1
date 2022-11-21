@@ -49,7 +49,7 @@ console.log("Proje açıldı!");
 
 /* Kodlar Buradan aşağıya */
 
-const anchors = document.querySelectorAll("a");
+const anchors = document.querySelectorAll("nav a");
 const sirketLogo = document.querySelector("#logo-img");
 const h1BuDom = document.querySelector("h1");
 const BtnBaslama = document.querySelector("button");
@@ -59,24 +59,26 @@ const pTexts = document.querySelectorAll("p");
 const middleImg = document.querySelector(".middle-img");
 const footerAnchor = document.querySelectorAll("a")[6];
 
-anchors.forEach((e) => {
+anchors.forEach((e,i = 1) => {
   e.classList.add("italic")
+  e.textContent = siteContent["nav"]["nav-item-"+i];
+  i++;
 });
 
-anchors[0].textContent = "Servisler";
-anchors[1].textContent = "Ürünler";
-anchors[2].textContent = "Vizyon";
-anchors[3].textContent = "Özellikler";
-anchors[4].textContent = "Hakkımızda";
-anchors[5].textContent = "İletişim";
+// anchors[0].textContent = "Servisler";
+// anchors[1].textContent = "Ürünler";
+// anchors[2].textContent = "Vizyon";
+// anchors[3].textContent = "Özellikler";
+// anchors[4].textContent = "Hakkımızda";
+// anchors[5].textContent = "İletişim";
 
-sirketLogo.setAttribute("src", "../mocks/img/logo.png");
+sirketLogo.setAttribute("src", siteContent.images["logo-img"]);
 
 h1BuDom.textContent = "Bu DOM Mükemmel";
 
 BtnBaslama.textContent = "Başlayın";
 
-altImg.setAttribute("src", "../mocks/img/cta.png");
+altImg.setAttribute("src", siteContent.images["cta-img"]);
 
 h4Text[0].textContent = "Özellikler";
 h4Text[1].textContent = "Hakkında";
@@ -107,7 +109,7 @@ pTexts[6].textContent = "+90 (123) 456-7899";
 
 pTexts[7].textContent = "satis@birsirketsitesi.com.tr";
 
-middleImg.setAttribute("src", "../mocks/img/accent.png");
+middleImg.setAttribute("src", siteContent.images["accent-img"]);
 
 footerAnchor.classList.add("bold");
 footerAnchor.textContent = "Copyright Bir Şirket Sitesi 2022";
